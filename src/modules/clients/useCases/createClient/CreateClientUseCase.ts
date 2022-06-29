@@ -19,7 +19,9 @@ class CreateClientUseCase{
             }
         })
 
-        if(clientAlreadyExists) throw new Error("Client Already Exists !")
+        if(clientAlreadyExists){
+            throw new Error("Client Already Exists !")
+        } 
 
         const hashPassword = await hash(password, 10);
 
@@ -31,7 +33,7 @@ class CreateClientUseCase{
             }
         })
 
-        return client.id;
+        return client;
 
     }
 
