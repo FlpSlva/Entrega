@@ -15,6 +15,8 @@ class CreateClientController{
             password
         })
 
+        if(!result) throw new Error;
+
         return response.status(201).json({result});
     }
 
