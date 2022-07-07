@@ -1,4 +1,4 @@
-import express, { request, response } from 'express';
+import "express-async-errors"
 import { router } from './routes';
 
 
