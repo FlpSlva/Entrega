@@ -1,4 +1,5 @@
 import { hash } from "bcrypt";
+import { AppError } from "../../../../errors/App.Error";
 import {prisma} from "../../../database/prismaClient";
 
 
