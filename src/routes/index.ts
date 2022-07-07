@@ -7,6 +7,7 @@ const router = Router();
 
 
 router.use("/client",createClientRoute);
+router.use("/client", authenticateClientRoute)
 
 export {router};
 
