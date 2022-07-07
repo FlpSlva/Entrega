@@ -1,4 +1,5 @@
 import { Router } from "express";
+import { authenticateClientRoute } from "./authenticateClient/authenticateClientRoute";
 import { createClientRoute } from "./createClient/createClientRoute";
 
 
