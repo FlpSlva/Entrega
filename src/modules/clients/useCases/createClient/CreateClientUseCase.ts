@@ -15,14 +15,14 @@ class CreateClientUseCase{
         const clientAlreadyExists = await prisma.clients.findFirst({
             where:{
                 username: {
-                    mode: "insensitive"
+
                 }
             }
         })
 
-        if(clientAlreadyExists){
-            throw new Error("Client Already Exists !")
-        } 
+      if(clientAlreadyExists){
+        throw new AppError("Username or Password Invalid !")
+    } 
 
         const hashPassword = await hash(password, 10);
 
