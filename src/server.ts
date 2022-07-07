@@ -1,6 +1,6 @@
 import "express-async-errors"
 import { router } from './routes';
-
+import { AppError } from './errors/App.Error';
 
 const app = express();
 const port = 3333;
