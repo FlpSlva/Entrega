@@ -1,6 +1,7 @@
 import { Router } from "express";
-import { authenticateClientRoute } from "./authenticateClient/authenticateClientRoute";
-import { createClientRoute } from "./createClient/createClientRoute";
+import { createDeliverymanRoute } from "./deliveryman/createDeliveryman/createDeliverymanRoute";
+import { authenticateClientRoute } from "./users/authenticateClient/authenticateClientRoute";
+import { createClientRoute } from "./users/createClient/createClientRoute";
 
 
 const router = Router();
@@ -8,6 +9,7 @@ const router = Router();
 
 router.use("/client",createClientRoute);
 router.use("/client", authenticateClientRoute)
+router.use("/deliveryman", createDeliverymanRoute);
 
 export {router};
 
